@@ -1,44 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
-        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>      </title>
+    <title>Quiz de Mitologia Grega</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="caixa-principal">
-
-        <h1>  Quiz Mitologia Grega   </h1>
-
-        <div class="tela-inicial">
-
-            <p> Teste seu conhecimento sobre as principais divindades da mitologia grega
-
-            </p>
-
-            
-            <button class="iniciar-btn">Iniciar</button>
-
+    <div id="quiz-container">
+        <div class="question" id="question"></div>
+        <div class="answers">
+            <button id="answer1" onclick="checkAnswer(1)"></button>
+            <button id="answer2" onclick="checkAnswer(2)"></button>
         </div>
-
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-
-            <p class="texto-resultado"></p>
-
-            <button class="novamente-btn">Jogar novamente</button>
-        </div>
+        <div class="result" id="result"></div>
     </div>
-    <script type="module" src="js/aleatorio.js"></script>
-    <script type="module" src="js/perguntas.js"></script>
-    <script type="module" src="js/script.js"></script>
-</body>
+    <script>
+        const questions = [
+            {
+                question: "Quem é o deus do trovão na mitologia grega?",
+                answers: ["Zeus", "Poseidon"],
+                correct: 1
+            },
+            {
+                question: "Quem é a deusa da sabedoria e da estratégia?",
+                answers: ["Atena", "Afrodite"],
+                correct: 1
+            },
+            {
+                question: "Qual deus é conhecido como o mensageiro dos deuses?",
+                answers: ["Hermes", "Ares"],
+                correct: 1
+            },
+            {
+                question: "Quem é o deus do mar?",
+                answers: ["Poseidon", "Apolo"],
+                correct: 1
+            },
+            {
+                question: "Qual deusa é associada ao amor e à beleza?",
+                answers: ["Afrodite", "Deméter"],
+                correct: 1
+            }
+        ];
 
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const answer1Button = document.getElementById('answer1');
+            const answer2Button = document.getElementById('answer2');
+
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            questionElement.textContent = currentQuestion.question;
+            answer1Button.textContent = currentQuestion.answers[0];
+            answer2Button.textContent = currentQuestion.answers[1];
+        }
+
+        function checkAnswer(answer) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (answer === currentQuestion.correct) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Você acertou ${score} de ${questions.length} perguntas!`;
+        }
+
+        window.onload = loadQuestion;
+    </script>
+</body>
 </html>
