@@ -48,6 +48,7 @@ button {
     padding: 15px;
     transition: background-color 0.3s;
     width: 20%;
+    font-size: 20px
 }
 
 button:hover {
