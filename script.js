@@ -14,19 +14,19 @@ const quizData = [
     },
     {
         question: "Qual deus é conhecido como o deus dos mares?",
-        image: "https://via.placeholder.com/300?text=Deus+dos+Mares",
+        image: "https://s4.static.brasilescola.uol.com.br/be/2022/04/1-poseidon.jpg",
         correctAnswer: "Poseidon",
         options: ["Poseidon", "Hades"]
     },
     {
         question: "Quem é o deus do vinho e da festividade?",
-        image: "https://via.placeholder.com/300?text=Deus+do+Vinho",
+        image: "https://static.historiadomundo.com.br/2022/01/dioniso.jpg",
         correctAnswer: "Dionísio",
         options: ["Dionísio", "Apolo"]
     },
     {
         question: "Quem é o deus do sol na mitologia grega?",
-        image: "https://via.placeholder.com/300?text=Deus+do+Sol",
+        image: "https://static.escolakids.uol.com.br/2022/02/apolo.jpg",
         correctAnswer: "Apolo",
         options: ["Apolo", "Hermes"]
     }
