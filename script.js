@@ -3,27 +3,32 @@ const quizData = [
     {
         question: "Qual é o nome do deus do trovão na mitologia grega?",
         image: "https://via.placeholder.com/300?text=Deus+do+Trovão",
-        correctAnswer: "Zeus"
+        correctAnswer: "Zeus",
+        options: ["Zeus", "Poseidon"]
     },
     {
         question: "Quem é a deusa da sabedoria na mitologia grega?",
         image: "https://via.placeholder.com/300?text=Deusa+da+Sabedoria",
-        correctAnswer: "Atena"
+        correctAnswer: "Atena",
+        options: ["Atena", "Afrodite"]
     },
     {
         question: "Qual deus é conhecido como o deus dos mares?",
         image: "https://via.placeholder.com/300?text=Deus+dos+Mares",
-        correctAnswer: "Poseidon"
+        correctAnswer: "Poseidon",
+        options: ["Poseidon", "Hades"]
     },
     {
         question: "Quem é o deus do vinho e da festividade?",
         image: "https://via.placeholder.com/300?text=Deus+do+Vinho",
-        correctAnswer: "Dionísio"
+        correctAnswer: "Dionísio",
+        options: ["Dionísio", "Apolo"]
     },
     {
         question: "Quem é o deus do sol na mitologia grega?",
         image: "https://via.placeholder.com/300?text=Deus+do+Sol",
-        correctAnswer: "Apolo"
+        correctAnswer: "Apolo",
+        options: ["Apolo", "Hermes"]
     }
 ];
 
@@ -31,27 +36,27 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 function loadQuestion() {
-    // Verifica se há perguntas restantes
     if (currentQuestionIndex >= quizData.length) {
         displayResult();
         return;
     }
 
     const questionData = quizData[currentQuestionIndex];
-    const questionElement = document.querySelector('.question');
-    const answersElement = document.querySelector('.answers');
+    const questionContainer = document.getElementById('question-container');
+    const answersContainer = document.getElementById('answers-container');
 
     // Atualiza a pergunta e a imagem
-    questionElement.innerHTML = `
-        <p>${questionData.question}</p>
-        <img src="${questionData.image}" alt="Imagem da Pergunta ${currentQuestionIndex + 1}" class="question-image">
+    questionContainer.innerHTML = `
+        <div class="question">
+            <p>${questionData.question}</p>
+            <img src="${questionData.image}" alt="Imagem da Pergunta ${currentQuestionIndex + 1}" class="question-image">
+        </div>
     `;
 
     // Adiciona botões de resposta
-    answersElement.innerHTML = `
-        <button onclick="checkAnswer('${questionData.correctAnswer}')">${questionData.correctAnswer}</button>
-        <button onclick="checkAnswer('Resposta errada')">Resposta errada</button>
-    `;
+    answersContainer.innerHTML = questionData.options.map(option => 
+        `<button onclick="checkAnswer('${option}')">${option}</button>`
+    ).join('');
 }
 
 function checkAnswer(selectedAnswer) {
@@ -64,12 +69,15 @@ function checkAnswer(selectedAnswer) {
 }
 
 function displayResult() {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
+    const questionContainer = document.getElementById('question-container');
+    const answersContainer = document.getElementById('answers-container');
+
+    questionContainer.innerHTML = `
         <div class="result">
             <p>Você acertou ${score} de ${quizData.length} perguntas!</p>
         </div>
     `;
+    answersContainer.innerHTML = ''; // Limpa os botões de resposta
 }
 
 // Inicializa o quiz
