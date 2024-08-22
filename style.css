@@ -32,6 +32,7 @@ body {
 .answers {
     display: flex;
     justify-content: center; /* Alinha os botões no centro horizontalmente */
+    margin-top: 20px; /* Espaço acima dos botões */
 }
 
 .answers button {
