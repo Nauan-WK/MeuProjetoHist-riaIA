@@ -21,6 +21,9 @@ body {
     display: flex;
     flex-direction: column; /* Alinha os itens verticalmente */
     align-items: center; /* Centraliza os itens horizontalmente */
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
 }
 
 .question {
