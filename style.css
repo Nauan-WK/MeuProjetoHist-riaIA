@@ -15,7 +15,7 @@ body {
     padding: 40px; /* Aumenta o padding interno */
     border-radius: 12px; /* Bordas arredondadas para a caixa de perguntas */
     max-width: 700px; /* Aumenta a largura máxima */
-    width: 100%; /* Largura total possível dentro do máximo */
+    width: 80%; /* Largura total possível dentro do máximo */
     box-sizing: border-box; /* Inclui padding e border na largura total */
     text-align: center; /* Centraliza o texto e os botões dentro da caixa */
     display: flex;
