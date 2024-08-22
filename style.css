@@ -28,13 +28,12 @@ body {
     margin-bottom: 50px; /* Aumenta o espaçamento abaixo da pergunta */
     font-size: 28px; /* Aumenta o tamanho da fonte das perguntas */
     font-family: 'Cursive', cursive; /* Fonte cursiva para as perguntas */
-    position: relative; /* Necessário para posicionar a imagem corretamente */
 }
 
 .question-image {
     max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    margin-top: 20px; /* Espaço acima da imagem para separá-la do texto da pergunta */
 }
 
 .answers {
