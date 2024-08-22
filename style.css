@@ -24,7 +24,7 @@ body {
 }
 
 .question {
-    margin-bottom: 30px; /* Aumenta o espaçamento abaixo da pergunta */
+    margin-bottom: 50px; /* Aumenta o espaçamento abaixo da pergunta */
     font-size: 28px; /* Aumenta o tamanho da fonte das perguntas */
     font-family: 'Cursive', cursive; /* Fonte cursiva para as perguntas */
 }
@@ -32,7 +32,6 @@ body {
 .answers {
     display: flex;
     justify-content: center; /* Alinha os botões no centro horizontalmente */
-    margin-top: 20px; /* Espaço acima dos botões */
 }
 
 .answers button {
