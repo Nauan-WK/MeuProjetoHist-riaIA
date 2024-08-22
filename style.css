@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwOhybObYN81dzpXaUbGRdotWNa0OhcWoIw&s') no-repeat center center fixed;
     background-size: cover; /* Faz a imagem cobrir toda a área da tela */
     color: #fff; /* Cor do texto branca */
     margin: 0;
@@ -27,6 +28,13 @@ body {
     margin-bottom: 50px; /* Aumenta o espaçamento abaixo da pergunta */
     font-size: 28px; /* Aumenta o tamanho da fonte das perguntas */
     font-family: 'Cursive', cursive; /* Fonte cursiva para as perguntas */
+    position: relative; /* Necessário para posicionar a imagem corretamente */
+}
+
+.question-image {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
 }
 
 .answers {
