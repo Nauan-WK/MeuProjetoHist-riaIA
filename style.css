@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwOhybObYN81dzpXaUbGRdotWNa0OhcWoIw&s') no-repeat center center fixed;
-    background-size: cover; /* Faz a imagem cobrir toda a área da tela */
+    background-color: black;
     color: #fff; /* Cor do texto branca */
     margin: 0;
     padding: 0;
