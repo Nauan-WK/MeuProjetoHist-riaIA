@@ -1,72 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
-    --cor-fundo: #01080E;
-    --cor-principal: #222225 ;
-    --cor-secundaria: #000000;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #ffffff;
-}
-  
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: cursive, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo do site preto */
+    color: #fff; /* Cor do texto branca */
+    margin: 0;
     padding: 20px;
-    border-style: solid;
-    border-radius: 20px;
-    border-color: white;
-    border-width: 2px;
-    font-family: cursive, verdana;
-    font-size: 25px;
 }
 
-h1, .caixa-perguntas, .caixa-resultado{
-    font-family: 'Edu VIC WA NT Beginner', sans-serif;
+#quiz-container {
+    background-color: #333; /* Cor de fundo cinza escuro para a caixa de perguntas */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas para a caixa de perguntas */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-h1 {
-    color: var(--cor-destaque);
+.question {
+    margin-bottom: 20px;
 }
 
-button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
-    width: 20%;
-    font-size: 20px
+.answers button {
+    background-color: #000; /* Cor de fundo preta para os botões */
+    color: #fff; /* Cor do texto branca para os botões */
+    border: 2px solid #fff; /* Borda branca para os botões */
+    border-radius: 12px; /* Bordas arredondadas para os botões */
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-button:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
-
+.answers button:hover {
+    background-color: #444; /* Cor de fundo preta mais clara no hover */
+    border-color: #ddd; /* Cor da borda mais clara no hover */
 }
 
-.caixa-resultado{
-    display: none;
-}
-
-.caixa-resultado.mostrar{
-    display: block;
-}
-
-.caixa-alternativas{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.result {
+    font-size: 20px;
+    font-weight: bold;
 }
