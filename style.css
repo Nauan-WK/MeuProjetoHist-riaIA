@@ -26,12 +26,12 @@ body {
 .question {
     margin-bottom: 30px; /* Aumenta o espaçamento abaixo da pergunta */
     font-size: 28px; /* Aumenta o tamanho da fonte das perguntas */
+    font-family: 'Cursive', cursive; /* Fonte cursiva para as perguntas */
 }
 
 .answers {
     display: flex;
-    flex-direction: column; /* Alinha os botões em coluna */
-    align-items: center; /* Centraliza os botões horizontalmente */
+    justify-content: center; /* Alinha os botões no centro horizontalmente */
 }
 
 .answers button {
@@ -39,9 +39,9 @@ body {
     color: #fff; /* Cor do texto branca para os botões */
     border: 2px solid #fff; /* Borda branca para os botões */
     border-radius: 12px; /* Bordas arredondadas para os botões */
-    margin: 12px; /* Espaçamento maior entre os botões */
-    padding: 20px 40px; /* Maior padding nos botões */
-    font-size: 20px; /* Aumenta o tamanho da fonte dos botões */
+    margin: 10px; /* Espaçamento entre os botões */
+    padding: 15px 30px; /* Padding nos botões */
+    font-size: 18px; /* Tamanho da fonte dos botões */
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
