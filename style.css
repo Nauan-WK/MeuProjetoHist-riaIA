@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    color: #000000; /* Cor do texto branca */
+    background-color: black;
+    color: #fff; /* Cor do texto branca */
     margin: 0;
     padding: 0;
     display: flex;
