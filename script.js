@@ -2,7 +2,7 @@
 const quizData = [
     {
         question: "Qual é o nome do deus do trovão na mitologia grega?",
-        image: "https://via.placeholder.com/300?text=Deus+do+Trovão",
+        image: "https://monomito.org/wp-content/uploads/zeus-origini.jpg",
         correctAnswer: "Zeus",
         options: ["Zeus", "Poseidon"]
     },
