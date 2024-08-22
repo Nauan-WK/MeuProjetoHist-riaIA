@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000; /* Fundo do site preto */
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwOhybObYN81dzpXaUbGRdotWNa0OhcWoIw&s') no-repeat center center fixed;
+    background-size: cover; /* Faz a imagem cobrir toda a área da tela */
     color: #fff; /* Cor do texto branca */
     margin: 0;
     padding: 0;
@@ -32,6 +33,7 @@ body {
 .answers {
     display: flex;
     justify-content: center; /* Alinha os botões no centro horizontalmente */
+    margin-top: 20px; /* Espaço acima dos botões */
 }
 
 .answers button {
