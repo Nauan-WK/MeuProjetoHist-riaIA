@@ -8,7 +8,7 @@ const quizData = [
     },
     {
         question: "Quem é a deusa da sabedoria na mitologia grega?",
-        image: "https://via.placeholder.com/300?text=Deusa+da+Sabedoria",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSam6ll_Lgw6WfncTjQ2qsODnZ2YAHg19dFvg&s",
         correctAnswer: "Atena",
         options: ["Atena", "Afrodite"]
     },
